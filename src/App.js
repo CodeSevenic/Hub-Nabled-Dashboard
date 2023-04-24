@@ -49,6 +49,7 @@ const App = () => {
               <Route path="/ecommerce" element="ECommerce" />
               {/* Pages */}
               <Route path="/orders" element="Orders" />
+              <Route path="/employees" element="Employees" />
             </Routes>
           </div>
         </div>
