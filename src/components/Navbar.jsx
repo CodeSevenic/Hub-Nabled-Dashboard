@@ -8,10 +8,11 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import avatar from '../data/avatar.jpg';
 import { Cart, Chat, Notification, UserProfile } from '.';
-import { useStateContext } from '../context/ContextProvider`';
+import { useStateContext } from '../context/ContextProvider';
 
 const Navbar = () => {
-  return <div>Navbar</div>;
+  const { activeMenu, setActiveMenu } = useStateContext();
+  return <div className="flex justify-between p-2 md:mx-6 relative"></div>;
 };
 
 export default Navbar;
