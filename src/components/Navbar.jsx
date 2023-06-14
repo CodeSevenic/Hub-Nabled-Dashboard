@@ -13,7 +13,17 @@ import { useStateContext } from '../context/ContextProvider';
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => {
   return (
     <TooltipComponent content={title} position="BottomCenter">
-      <button className="relative" onClick={customFunc}></button>
+      <button
+        className="relative text-xl rounded-full p-3 hover:bg-light-gray"
+        type="button"
+        onClick={customFunc}
+      >
+        <span
+          style={{ background: dotColor }}
+          className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
+        ></span>
+        {icon}
+      </button>
     </TooltipComponent>
   );
 };
@@ -25,6 +35,8 @@ const Navbar = () => {
       <NavButton
         title="Menu"
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+        color={'blue'}
+        icon={<AiOutlineMenu />}
       />
     </div>
   );
