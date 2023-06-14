@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FiShoppingCart } from 'react-icons/fi';
 
