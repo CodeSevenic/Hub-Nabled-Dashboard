@@ -12,9 +12,15 @@ import {
 
 import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '../../data/dummy';
 
-const Stacked = () => {
+const Stacked = ({ width, height }) => {
   return (
-    <ChartComponent>
+    <ChartComponent
+      width={width}
+      height={height}
+      id="stack chart"
+      primaryXAxis={stackedPrimaryXAxis}
+      primaryYAxis={stackedPrimaryYAxis}
+    >
       <Inject services={[StackingColumnSeries, Legend, Category, Tooltip]} />
     </ChartComponent>
   );
