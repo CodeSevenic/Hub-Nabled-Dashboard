@@ -79,6 +79,13 @@ const Ecommerce = () => {
                     23%
                   </span>
                 </p>
+                <p className="text-gray-500 mt-1">Budget</p>
+              </div>
+              <div className="">
+                <p>
+                  <span className="text-3xl font-semibold">$93,438</span>
+                </p>
+                <p className="text-gray-500 mt-1">Budget</p>
               </div>
             </div>
           </div>
