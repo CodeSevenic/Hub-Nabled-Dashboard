@@ -13,11 +13,11 @@ const SparkLine = ({ id, height, width, color, data, type, currentColor }) => {
       border={{ color: currentColor, width: 2 }}
       dataSource={data}
       xName="x"
-      yName="yval"
+      yName="y"
       type={type}
       tooltipSettings={{
         visible: true,
-        format: '${x} : data ${yval}',
+        format: '${x} : data ${y}',
         trackLineSettings: { visible: true },
       }}
     >
