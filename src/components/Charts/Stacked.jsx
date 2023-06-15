@@ -18,10 +18,17 @@ const Stacked = ({ width, height }) => {
       width={width}
       height={height}
       id="stack chart"
-      primaryXAxis={stackedPrimaryXAxis}
-      primaryYAxis={stackedPrimaryYAxis}
+      // primaryXAxis={stackedPrimaryXAxis}
+      // primaryYAxis={stackedPrimaryYAxis}
+      chartArea={{ border: { width: 0 } }}
+      tooltip={{ enable: true }}
     >
       <Inject services={[StackingColumnSeries, Legend, Category, Tooltip]} />
+      <SeriesCollectionDirective>
+        {stackedCustomSeries.map((series, index) => (
+          <SeriesDirective key={index} {...series} />
+        ))}
+      </SeriesCollectionDirective>
     </ChartComponent>
   );
 };
