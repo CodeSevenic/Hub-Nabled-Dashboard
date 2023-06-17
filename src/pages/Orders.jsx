@@ -1,6 +1,7 @@
 ﻿import React from 'react';
 import {
   GridComponent,
+  ColumnsDirective,
   ColumnDirective,
   Resize,
   Sort,
@@ -20,6 +21,13 @@ const Orders = () => {
   return (
     <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="Page" title="Orders" />
+      <GridComponent>
+        <ColumnsDirective>
+          {ordersGrid.map((column, index) => (
+            <ColumnDirective key={index} {...column} />
+          ))}
+        </ColumnsDirective>
+      </GridComponent>
     </div>
   );
 };
